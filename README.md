@@ -1,6 +1,14 @@
 # RecipeShoppingList
 
+This repository serves to save my coursework and act as a quick reference to Angular practices and concepts I'm learning through [Angular - The Complete Guide (2021)](https://www.udemy.com/course/the-complete-guide-to-angular-2/) with Maximilian Schwarzmüller.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+
+## Technologies 
+![JavaScript](https://img.shields.io/badge/javascript-2E3440?style=for-the-badge&logo=javascript)
+![TypeScript](https://img.shields.io/badge/typescript-2E3440?style=for-the-badge&logo=typescript)
+![Angular](https://img.shields.io/badge/angular-2E3440?style=for-the-badge&logo=angular)
+![Bootstrap](https://img.shields.io/badge/bootstrap-2E3440?style=for-the-badge&logo=bootstrap)
 
 ## Development server
 
