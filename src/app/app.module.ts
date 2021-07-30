@@ -25,6 +25,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     DropdownDirective,
   ],
   imports: [BrowserModule, FormsModule],
+  // add shoppingList service? current providedIn:'root'
   providers: [],
   bootstrap: [AppComponent],
 })
