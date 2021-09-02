@@ -7,34 +7,35 @@ import { Recipe } from './recipe.model';
 @Injectable({ providedIn: 'root' })
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
-  private recipes: Recipe[] = [
-    new Recipe(
-      'Upside Down Pineapple Cake',
-      'Delicious cake with pineapple',
-      'https://images.media-allrecipes.com/userphotos/600x600/5909188.jpg',
-      [
-        new Ingredient('Pineapple', 1),
-        new Ingredient('Cherries', 10),
-        new Ingredient('Upside Down Cake', 1),
-      ]
-    ),
-    new Recipe(
-      'Rightside Up Pineapple Cake',
-      'Delicious cake with pineapple the right way up!',
-      'https://images.media-allrecipes.com/userphotos/600x600/5909188.jpg',
-      [
-        new Ingredient('Pineapple', 1),
-        new Ingredient('Cherries', 10),
-        new Ingredient('Right Side Up Cake', 1),
-      ]
-    ),
-  ];
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'Upside Down Pineapple Cake',
+  //     'Delicious cake with pineapple',
+  //     'https://images.media-allrecipes.com/userphotos/600x600/5909188.jpg',
+  //     [
+  //       new Ingredient('Pineapple', 1),
+  //       new Ingredient('Cherries', 10),
+  //       new Ingredient('Upside Down Cake', 1),
+  //     ]
+  //   ),
+  //   new Recipe(
+  //     'Rightside Up Pineapple Cake',
+  //     'Delicious cake with pineapple the right way up!',
+  //     'https://images.media-allrecipes.com/userphotos/600x600/5909188.jpg',
+  //     [
+  //       new Ingredient('Pineapple', 1),
+  //       new Ingredient('Cherries', 10),
+  //       new Ingredient('Right Side Up Cake', 1),
+  //     ]
+  //   ),
+  // ];
+  private recipes: Recipe[] = [];
 
   constructor(private shoppingListService: ShoppingListService) {}
 
   setRecipes(recipes: Recipe[]) {
     this.recipes = recipes;
-    // this.recipesChanged.next(this.recipes.slice());
+    this.recipesChanged.next(this.recipes.slice());
   }
 
   getRecipes() {
