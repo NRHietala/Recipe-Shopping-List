@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
 
+export const LOGIN_START = '[Auth] LOGIN_START';
 export const LOGIN = '[Auth] LOGIN';
 export const LOGOUT = '[Auth] LOGOUT';
 
@@ -14,6 +15,12 @@ export class Login implements Action {
       expirationDate: Date;
     }
   ) {}
+}
+
+export class LoginStart implements Action {
+  readonly type = LOGIN_START;
+
+  constructor(public payload: { email: string; password: string }) {}
 }
 
 export class Logout implements Action {
